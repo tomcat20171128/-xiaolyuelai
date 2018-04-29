@@ -1,6 +1,6 @@
 # 微信小程序 社交娱乐
 
-#Blog
+#Blog（项目介绍）
 
 https://blog.csdn.net/qq_34883462/article/details/80141600
 
