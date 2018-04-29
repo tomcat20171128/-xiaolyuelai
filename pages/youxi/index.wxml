@@ -1,0 +1,55 @@
+<!--index.wxml-->
+<view>
+  <icon type="search" color="white" size="24" class="icon"></icon>
+ 
+</view>
+<image class="top-image" src="{{bannerList[activeBannerIndex].url}}" mode="widthFix"></image>
+<view class="container">
+  <swiper class="slider" bindchange="bindChange">
+    <swiper-item id="green">
+      <view class="scroll-view-item">
+          <text class="title">治愈系·游戏</text>
+          <view class="content">
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/img_1.jpg" bindtap='youxi' id="1" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">游戏区域1</text>
+                        <text>重现二战的最后时刻</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/img_2.jpg" bindtap='youxi' id="2" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">游戏区域2</text>
+                        <text>记忆深处故乡的味道</text>
+                    </view>
+                 </view>
+              </view>
+              <view class="list">
+                 <view class="detail">
+                    <image src="../../images/img_3.jpg" bindtap='youxi' id="3" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">游戏区域3</text>
+                        <text>点点滴滴是悄悄的嘘唏</text>
+                    </view>
+                 </view>
+                 <view class="detail">
+                    <image src="../../images/img_4.jpg" bindtap='youxi' id="4" mode="widthFix"></image>
+                    <view class="font-area">
+                        <text class="bold">游戏区域4</text>
+                        <text>背起的是沉重的责任</text>
+                    </view>
+                 </view>
+              </view>
+              <view class="space-50"></view>
+          
+          </view>
+           
+      </view>
+     
+    </swiper-item>
+   
+  </swiper>
+  
+</view>

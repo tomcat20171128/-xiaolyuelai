@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view>
+  <icon type="search" color="white" size="24" class="icon"></icon>
+ 
+</view>
+<image class="top-image" src="{{bannerList[activeBannerIndex].url}}" mode="widthFix"></image>
+<view class="container">
+  <swiper class="slider" bindchange="bindChange">
+    <swiper-item id="green">
+      <view class="scroll-view-item">
+          <text class="title">赞助支持</text>
+          <view class="content">
+              <view class="list">
+                 <view class="detail">
+                    <image  src="../../images/zanzhu.jpg" bindtap='previeimg' id="1" mode="widthFix"></image>
+                    <view class="font-area">
+                     
+                    </view>
+                 </view>
+                
+              </view>
+              
+              <view class="space-50"></view>
+          
+          </view>
+           
+      </view>
+     
+    </swiper-item>
+   
+  </swiper>
+  
+</view>
