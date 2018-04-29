@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/membercenter/membercenter",
+    "pages/index/detail",
+    "pages/photo/add-video",
+    "pages/my/index",
+    "pages/my/list",
+    "pages/my/fav",
+    "pages/my/mydyn",
+    "pages/my/info",
+    "pages/my/detail",
+    "pages/my/appointment",
+    "pages/index/index",
+    "pages/person/index",
+    "pages/youxi/index",
+    "pages/dynamic/index",
+    "pages/dynamic/add",
+    "pages/msg/index",
+    "pages/msg/list",
+    "pages/comment/index",
+    "pages/kongjian/kongjian",
+    "pages/kongjian/detail",
+    "pages/membercenter/quanbu",
+    "pages/info/index",
+    "pages/info/add",
+    "pages/geren/index",
+    "pages/meiri/index",
+    "pages/tiaozhuan/tiaozhuan",
+    "pages/tiaozhuan/tiaozhuan1",
+    "pages/tiaozhuan/tiaozhuan2",
+    "pages/tiaozhuan/tiaozhuan3",
+    "pages/msg/list2",
+    "pages/tiaozhuan/tiaozhuan4"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eaeaea",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "black",
+    "borderStyle": "white",
+    "selectedColor": "rgb(176,170,168)",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/membercenter/membercenter",
+        "text": "发现",
+        "iconPath": "images/tabBar/tabBar_essence_click_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_essence_icon.png"
+      },
+          {
+            "pagePath": "pages/youxi/index",
+            "text": "游戏",
+            "iconPath": "images/tabBar/tabBar_me_click_icon.png",
+            "selectedIconPath": "images/tabBar/tabBar_me_icon.png"
+          },
+      {
+        "pagePath": "pages/msg/index",
+        "text": "消息",
+        "iconPath": "images/tabBar/tabBar_new_click_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_new_icon.png"
+      },
+  
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/tabBar/tabBar_friendTrends_click_icon.png",
+        "selectedIconPath": "images/tabBar/tabBar_friendTrends_icon.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
