@@ -1,0 +1,38 @@
+<view class="photo-add">
+    <form bindsubmit="formSubmit">
+     <view class="weui-cell">
+            <view class="weui-cell__bd" wx:for="{{filess}}" wx:for-item="item">
+                <textarea class="weui-textarea" auto-focus bindfocus="bindfocus" bindinput="bindinput" placeholder="发表至{{item.name}}" style="height: 5.3em" />
+            </view>
+        </view>
+  
+
+    <view class="video-box" wx:if="{{video}}">
+        <video class="video" src="{{video}}"></video>
+        <view style="text-align:center;color:green;font-size:14px;padding-top:7px;">上传视频大小为3M以内，当前大小为{{size}}M</view>
+    </view>
+
+   
+    
+
+       <view  bindtap="addVideo" class="weui-uploader__input-box">
+                        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                    </view>
+    
+    
+    
+    
+    <view class="btn-box">
+        <view class="weui-cell">
+                    
+                        <view >位置:</view>
+                    
+                    <view class="weui-cell__bd">
+                        <view class="weui-input" bindtap="sexDeparture">{{departure}}</view>                 
+                    </view>
+                </view>
+     <view class="cut-line"></view>
+        <button type='primary' formType="submit" >提交</button>
+    </view>
+    </form>
+</view>

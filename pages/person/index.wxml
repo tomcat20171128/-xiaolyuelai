@@ -1,0 +1,50 @@
+<view class="page">
+  
+  <view class="page__bd">
+    <swiper class='swiper-item__content' current="" bindchange="changeswiper">
+     <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" class="list_item">
+     <view wx:for="{{item.img}}" wx:for-item="res">
+
+      <view wx:if="{{(item.img)}}">
+      <swiper-item class="swip">
+        <view class='page__bd_content'> 
+        
+          <image class="slide-image" src="{{res}}" data-name="{{idx}}" id="{{res}}" bindtap="previeimg" mode="aspectFill"/> 
+              
+              
+          <view class="name"></view>
+          
+          <view wx:if="{{(ll.msg1.gender)==1}}">
+          <view class="age">♂</view>
+          </view>
+          <view wx:else>
+          <view class="age1">♀</view>
+          </view>
+          
+          <view class="conste">
+           <view wx:if="{{(ll.msg1.phone)}}">
+           年龄/{{ll.msg1.phone}}
+        
+         </view>
+          </view>
+          <view class="status">名字/{{ll.msg1.nickName}}</view> 
+          <view class="conste1" id="{{ll.msg1.id}}" bindtap="kongjian">进入空间</view>
+           <view class="conste2"  id="{{ll.msg1.id}}" bindtap="liuyan">留言墙</view>
+         <view class="status1">地点/{{ll.msg1.city}}{{ll.msg1.county}}</view> 
+        </view>
+       
+      </swiper-item>
+       </view>
+        
+       </view>
+     </view>
+    </swiper>
+  </view> 
+  <view class="page__ft">
+  <view  class="zview" bindtap="zan">
+    <image class="notlike {{left?'active':''}}"  src="/images/like.png" /><text class="c-icon2">{{ll.zan}}</text>
+    </view>
+     <image wx:if="{{!shoucang}}" src="../../images/shoucang.png" class="shoucang" bindtap="shoucang"></image>
+    <image wx:if="{{shoucang}}" bindtap="qxshoucang" src="../../images/shoucang1.png" class="shoucang"></image>
+  </view>
+</view>  

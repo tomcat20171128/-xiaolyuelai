@@ -1,0 +1,59 @@
+<scroll-view scroll-y="true" style="height: {{height}}px" scroll-into-view="{{toview}}" bindscrolltolower="tobottom" scroll-top="0">
+<view class="page">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>
+    <view class="page__bd header" wx:for="{{data1}}" wx:for-item="item">
+        <view class="head">
+            <image src="{{item.avatarUrl}}"></image>
+        </view>
+        <view class="username">
+            {{item.nickName}}
+        </view>
+        
+    </view>
+
+  
+
+    
+        <view class="comment_list_header">全部照片</view>
+        
+       
+           </view>
+</scroll-view>
+
+<view class="page">
+<view id="main">
+    <view id="list">
+        <view wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" class="list_item">
+            <view>
+                <view class="po-avt-wrap">
+                    <image class="po-avt data-avt" src="{{item.avatarUrl}}" ></image>
+                </view>
+                <view class="po-cmt">
+                    <view class="po-hd">
+                        <view class="po-name"><text class="data-name">{{item.nickName}}</text></view>
+                        <view class="post">
+                            <view>{{item.content}}</view>
+                            <view>
+                                <image wx:for="{{item.img}}" bindtap="previeimg" wx:for-item="res" class="list-img" data-name="{{idx}}" id="{{res}}" src="{{res}}" mode="aspectFill" style="max-height: 100px;max-width: 120px;"></image>
+                            </view>
+                        </view>
+                        <view class="time">{{item.time}}<text style="color:#2c81b3;margin-left:3px;" bindtap="del" data-id="{{idx}}">删除</text></view><image class="c-icon" id="{{idx}}" src="#" bindtap="seecomment"></image>
+                    </view>
+                    <view class="r" wx:if="{{item.comments}}"></view>
+                    <view class="cmt-wrap">
+                        <view class="cmt-list">
+                            <view wx:for="{{item.comments}}" bindtap="seecomment" id="{{idx}}" data-name="{{comment.nickName}}" wx:for-item="comment" hover-class="comment_hover" style="color:#000;">
+                                <text>{{comment.nickName}}<text style="color:#000;margin:0px 2px;" wx:if="{{comment.reply}}">回复</text>{{comment.reply}}:</text>{{comment.content}}
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="null" wx:if="{{!list}}">没有记录</view>
+    </view> </view> </view>
+<view class="add" bindtap="add">
+<image src="/images/adddy.png"></image>
+</view>
+
+  

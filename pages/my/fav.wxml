@@ -1,0 +1,21 @@
+
+
+
+
+    <block wx:for="{{list}}" wx:key="id" wx:for-index="idxfrd" wx:for-item="friends">
+
+      <block >
+
+        <view class=" list-view-friend " id="{{friends.id}} ">
+
+          <image class="list-friend-image " id="{{friends.id}} " bindtap="jkl" src="{{friends.avatarUrl}} "></image>
+
+          <text class="list-friend-text ">{{friends.nickName}}</text>
+
+        </view>
+
+      </block>
+
+    </block>
+
+

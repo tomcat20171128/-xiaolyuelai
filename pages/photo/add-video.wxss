@@ -1,0 +1,70 @@
+@import "../common/weui.wxss";
+
+page {
+    background:#f2f2f2;
+    font-size:1em;
+}
+
+.photo-add {
+    
+}
+
+.photo-add .desc {
+    border-bottom:#eee solid 1px;
+    padding:.5em;
+    background:#FFFFFF;
+}
+
+.photo-add .desc textarea {
+    width:100%;
+    font-size:1em;
+    height:6em;
+}
+
+.photo-add .select-album {
+    font-size:1em;
+    padding:.75em 0 0 0;
+}
+
+.photo-add .select-album .title {
+    padding-bottom:.25em;
+    padding-left:.75em;
+    color:#666;
+    font-size:.875em;
+}
+
+.photo-add .btn-box {
+
+    width: 93%;
+    margin-top:6em;
+  margin-left: 10px;
+   text-align:center;
+
+}
+/*分割线*/
+.cut-line{
+  height: 80%;
+  width: 2rpx;
+  background-color: #dddcdc;
+  float: right;
+  margin-top: 5%;
+  margin-right: 3rpx;
+}
+.photo-add .video-box {
+    margin-top:1em;
+    text-align:center;
+    width: 100%
+}
+
+.photo-add .add-video {
+    padding-top:1em;
+    text-align:center;
+}
+
+.picker {
+    font-size:1em;
+    padding:.75em;
+    background:#FFFFFF;
+    border-top:#eee solid 1px;
+    border-bottom:#eee solid 1px;
+}

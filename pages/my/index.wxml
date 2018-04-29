@@ -1,0 +1,74 @@
+<view class="page">
+ <!--页头-->
+ <view class="page__hd" >
+ 
+  <view class="head" >   
+    <view wx:for="{{data1}}" wx:for-item="item"><navigator url="/pages/my/info"><image src="{{item.avatarUrl}}"></image></navigator></view>
+    <view><text>{{item.nickName}}</text></view>
+  </view>
+ 
+ </view>
+ <!--主体-->
+ <view class="page__bd"> 
+  <view class="list">
+   <view class="page__bd" >
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" wx:for="{{data1}}" wx:for-item="item" id="{{item.id}}"       hover-class="weui-cell_active" bindtap="open">
+                <view class="weui-cell__hd" >
+                   <image src="/images/edit.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">留言墙</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">{{infoCount}}</view>
+            </view>
+
+    
+            <navigator url="/pages/info/add" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/images/appointment.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">个人秀</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"><view class="weui-badge" wx:if="{{appointmentCount>0}}" style="margin-left: 5px;"></view></view>
+            </navigator>
+            <navigator url="/pages/my/fav" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                   <image src="/images/fav1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">我的好友</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="/pages/my/mydyn" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                   <image src="/images/dy.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">我的动态</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="/pages/meiri/index" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/images/qiandao.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">每日签到</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="/pages/my/info" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/images/me.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">个人信息</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+             <navigator url="/pages/tiaozhuan/tiaozhuan4" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="/images/aixin.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">赞助支持</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+    </view>
+
+
+  </view>
+ </view>
+ <!--没有页脚-->
+</view>

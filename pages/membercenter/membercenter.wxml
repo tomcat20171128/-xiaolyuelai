@@ -1,0 +1,59 @@
+<!--个人中心-->
+
+
+  <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true" interval="3000">
+   
+      <swiper-item>
+        <image class='tu' id="7" src="https://ywchn.cn/Uploads/lunbo3.jpg"></image>
+      </swiper-item>
+      <swiper-item>
+        <image class='tu' id="7" src="https://ywchn.cn/Uploads/lunbo1.jpg"></image>
+      </swiper-item>
+   <swiper-item>
+        <image class='tu' id="7" src="https://ywchn.cn/Uploads/lunbo2.jpg"></image>
+      </swiper-item>
+  </swiper>
+ 
+
+
+<view style="background-color:white">
+ 
+  <view class="listtitle" bindtap="goToSecondaryService" data-section-index="{{index}}">
+    <view class="blue-bd-left"></view>
+    <view class="listTitle-content"> {{name}} </view>
+
+    <block   >
+      <view bindtap="quanbu" class="pindao">最热话题</view>
+      <image class="rightArrow" src="../../images/dongt.png"></image>
+    </block>
+
+  </view>
+
+   
+    <view class="menu_item" wx:for="{{dataList}}" wx:key="list" wx:for-item="item" wx:for-index="idx">
+  
+        <image src="{{item.icon}}"   id="{{item.fid}}"   bindtap="zaima" data-id="{{idx}}" mode="aspectFit"></image>
+        <text>{{item.name}}</text>
+  
+    </view>
+
+     <view class="listtitle" bindtap="goToSecondaryService" data-section-index="{{index}}">
+    <view class="blue-bd-left"></view>
+    <view class="listTitle-content"> {{name}} </view>
+
+    <block >
+      <view class="pindao">关注的话题</view>
+      <image class="rightArrow" src="../../images/dongt.png"></image>
+    </block>
+
+  </view>
+
+    <view class="menu_item" wx:for="{{pp}}" wx:key="list1" wx:for-item="item" wx:for-index="idx" catchtap="zaima">
+       
+        <image src="{{item.icon}}" id="{{item.fid}}" data-name="{{item.name}}" catchtap="zaima1" mode="aspectFit"></image>
+        <text>{{item.name}}</text>
+  
+    </view>
+</view>
+
+<view style="height:20rpx;"></view>

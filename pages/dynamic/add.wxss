@@ -1,0 +1,14 @@
+.page{margin:10rpx;}
+.weui-btn{background: #f4de3b!important;color:#000!important;}
+.weui-cells::before{border-top: 0!important;}
+.weui-cells{margin-top:15px;}
+.weui-input{ 
+
+ width: 260px;
+overflow:hidden;text-overflow:ellipsis;
+
+
+}
+.weui-cell_input{
+  margin-right: -250px
+}

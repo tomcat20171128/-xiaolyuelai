@@ -1,0 +1,5 @@
+/**index.wxss**/
+.head{display:flex;height:100px;flex-direction: column;width:100%;padding: 100rpx 0rpx; align-items: center;  justify-content: space-between;background:url("https://ywchn.cn/Uploads/88.jpg")}
+.head image{width:150rpx;height:150rpx;margin:0 auto;border-radius: 50%;}
+.list view{font-size:12pt;}
+.list .weui-cell{padding: 15px !important}

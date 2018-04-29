@@ -1,0 +1,115 @@
+<view class="page">
+<view id="main">
+    <view id="list">
+<swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true" interval="3000">
+    <block wx:for="{{jkl}}" wx:key="this" wx:for-item="item" >
+     <view wx:for="{{item.img }}"wx:key="this" wx:for-item="res">
+      <swiper-item >
+     
+        <image class='tu' id="7" src="{{res}}"></image>
+      
+      </swiper-item>
+        </view>
+    </block>
+  </swiper>
+  <image wx:if="{{!shoucang}}" src="../../images/shoucang.png" class="shoucang" bindtap="shoucang"></image>
+    <image wx:if="{{shoucang}}" bindtap="qxshoucang" src="../../images/shoucang1.png" class="shoucang"></image>
+
+        <view wx:for="{{list}}" wx:key="this" wx:for-index="idx" wx:for-item="item" class="list_item">
+            <view  >
+                <view class="po-avt-wrap">
+                <view wx:if="{{item.avatarUrl}}">
+                    <image bindtap="person" id="{{item.uid}}" class="po-avt data-avt" src="{{item.avatarUrl}}" ></image>
+                  </view>
+                  <view wx:else>
+                  <image bindtap="person"  id="{{-1}}" class="po-avt data-avt" src="https://ywchn.cn/Uploads/feid.png" ></image>
+                  </view>
+                </view>
+                <view class="po-cmt">
+                    <view class="po-hd">
+                        <view class="po-name"><text class="data-name">{{item.nickName}}</text></view>
+                        <view class="post" id="{{item.id}}" bindtap="details">
+                            <view>{{item.content}}</view>
+                            <view >
+
+ <view   bindtap="suo" wx:for="{{item.videoj}}" wx:key="this" wx:for-item="res">
+                          
+                                <image mode="aspectFill" style="max-height: 140px;max-width: 185px;" src="{{res}}"> </image>
+                                  <text class='ss'>视频</text>
+                                 
+                                   
+                            </view>
+
+                            
+
+
+                            </view>
+
+                          <view wx:if="{{item.img.length==1}}">
+                            
+                              
+                                <image  wx:for="{{item.img}}" wx:key="this" bindtap="previeimg" wx:for-item="res"                 class="list-img" data-name="{{idx}}" id="{{res}}" src="{{res}}"mode="aspectFill" style="max-height: 140px;max-width: 185px;"  
+                                ></image>                                                       
+                               
+                            </view>
+ <view wx:elif="{{item.img.length==2}}">
+                          
+                              
+                                <image  wx:for="{{item.img}}"wx:key="this" bindtap="previeimg" wx:for-item="res"                 class="list-img" data-name="{{idx}}" id="{{res}}" src="{{res}}"mode="aspectFill" style="max-height: 100px;max-width: 130px;"  
+                                ></image>                                                       
+                                </view>
+                            
+                            <view wx:elif="{{item.img.length==3||item.img.length==4}}">
+                         
+                               
+                                <image  wx:for="{{item.img}}"wx:key="this" bindtap="previeimg" wx:for-item="res" class="list-img" data-name="{{idx}}" id="{{res}}" src="{{res}}" mode="aspectFill"style="width:650px" ></image>                                                       </view>
+                                   
+                                    <view wx:elif="{{item.img.length>4||item.img.length<10}}">
+                         
+                               
+                                <image  wx:for="{{item.img}}"wx:key="this" bindtap="previeimg" wx:for-item="res" class="list-img" data-name="{{idx}}" id="{{res}}" src="{{res}}" mode="aspectFill" style="max-height: 80px;max-width: 80px;" ></image>                                                       </view>
+         
+
+
+ 
+
+                        </view>
+                        <view wx:if="{{item.weizhi}}">   <image class='c-icon3' src='/images/1.png'></image><text class='ss1'>{{item.weizhi}}</text> </view>
+                        <view class="time">{{item.time}}</view>
+                        
+                         
+                        <image class="c-icon" id="{{idx}}" src="/images/c.png" bindtap="seecomment"></image>
+                       
+                  <view wx:for='{{list6}}' wx:for-item="kk" >
+                          
+                          <view wx:if="{{item.id==kk.cid}}" class="zview" bindtap="zan" id="{{idx}}">
+                        <image class="c-icon1" src="/images/zan1.png"></image><text class="c-icon2">{{item.zan}}</text></view>
+                     
+                       
+                </view>  
+                        
+                     
+                        <view wx:if="{{item.iszan}}" class="zview" bindtap="zan" id="{{idx}}">
+                        <image class="c-icon1" src="/images/zan1.png"></image><text class="c-icon2">{{item.zan}}</text></view>
+                        <view wx:if="{{!item.iszan}}" class="zview" bindtap="zan" id="{{idx}}">
+                        <image class="c-icon1" src="/images/zan.png"></image><text class="c-icon2">{{item.zan}}</text></view>
+                       
+                     
+                     
+                    </view>
+                    <view class="r" wx:if="{{item.comments}}"></view>
+                    
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>
+<view class="add" bindtap="add">
+<image src="/images/adddy.png"></image>
+</view>
+
+<view class="comment" wx:if="{{seecomment}}">
+<input  bindconfirm="comment" bindblur="hidecomment" placeholder="{{reply}}" focus auto-height="true" fixed="true" cursor-spacing="10" confirm-type="send"/>
+</view>
+</view>

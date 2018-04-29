@@ -1,0 +1,30 @@
+<!--个人中心-->
+
+
+ 
+
+
+<view style="background-color:white">
+ 
+  <view class="listtitle" bindtap="goToSecondaryService" data-section-index="{{index}}">
+    <view class="blue-bd-left"></view>
+    <view class="listTitle-content"> {{name}} </view>
+
+    <block >
+      <view class="pindao">最热话题</view>
+      <image class="rightArrow" src="../../images/dongt.png"></image>
+    </block>
+
+  </view>
+
+   
+    <view class="menu_item" wx:for="{{dataList}}"  wx:for-item="item" >
+  
+        <image src="{{item.icon}}"   id="{{item.fid}}" catchtap="zaima" data-name="{{item.name}}" mode="aspectFit"></image>
+        <text>{{item.name}}</text>
+  
+    </view>
+
+
+</view>
+
